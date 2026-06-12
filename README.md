@@ -193,6 +193,20 @@ python main.py --role master supervise-close <punish_id> yes "Validation Thresho
 
 ---
 
+## 🌐 Use Cases / Community
+
+While designed as an enterprise-grade orchestration framework, this system is highly adaptable for specific subcultures and alternative workflow paradigms, including:
+
+- **Cyber-Dom routines** — fully automated AI-driven dominance and discipline loops with real-time compliance verification
+- **Automated BDSM supervision** — computer vision enforcement of physical protocols with algorithmic penalty escalation
+- **TeaseAI-like workflows** — LLM-powered interaction patterns for structured psychological constraint enforcement
+- **Anti-procrastination & self-discipline** — OS-level app blocking, focus timers, and behavioral accountability tracking
+- **Remote accountability partnerships** — event-driven signal files enabling distributed dom/sub role verification
+
+For practitioners, a dedicated guide is available at [README_MS.md](README_MS.md) (中文圈内指南).
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for complete technical validation terms.
