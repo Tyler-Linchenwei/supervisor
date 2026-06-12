@@ -1,0 +1,34 @@
+# 运行时状态/敏感数据
+config.json
+archive.json
+camera_config.json
+
+# data 目录（取证照片/录像/inbox/推流状态/临时文件）
+data/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude 本地配置
+.claude/
+
+# 角色记忆（个人隐私）
+memory/
+
+# MediaPipe 模型（大文件，可通过 requirements 单独下载）
+pose_landmarker.task
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
