@@ -1,5 +1,7 @@
 # CyberSupervisor: Asynchronous LLM-Driven Self-Discipline & Supervision Engine
 
+> 🔞 **For M/S & BDSM Practitioners:** [Click here for the Cyber-Dom Guide (中文圈内指南)](README_MS.md)
+
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Architecture](https://img.shields.io/badge/Architecture-Inverted_HITL-orchestration.svg)](#architecture)
