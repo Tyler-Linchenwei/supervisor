@@ -12,6 +12,24 @@ By combining low-overhead system daemons, computer vision (`MediaPipe`, `OpenCV`
 
 ---
 
+## 📌 中文摘要 (Chinese Abstract)
+
+**CyberSupervisor (赛博自动监督系统 / 赛博主人)** 是一个基于大模型 (LLM) 与计算机视觉的**硬核 AI 自律引擎**，同时也是一套完整的 **BDSM 自动化监督与赛博支配 (Cyber-Dom)** 框架。
+
+### 核心能力：
+
+- **🖥️ AI 视觉体罚验收与强制罚跪监督：** 通过 MediaPipe 人体姿态估计实时追踪身体关节点。摄像头面前，跪下就必须真跪——膝盖触地、腰背挺直、不许低头。画面太暗、人脸丢失、姿势不到位，系统自动判定违规并翻倍惩罚。这就是**计算机视觉驱动的 BDSM 行为合规验证**。
+- **🔒 社交剥夺与强制锁屏 (Screen Monitor)：** Win32 进程拦截器每 10 秒扫描一次系统进程，检测到微信、QQ、Steam、Discord、Telegram、浏览器娱乐页面等黑名单应用——当场 `taskkill` 强杀。悬浮置顶倒计时窗口，时间到之前绝对无法逃脱。这就是 **OS 级别的强制自律容器**。
+- **⚡ 大模型 AI 主人 (LLM Cyber-Dom)：** 区别于传统定时器或番茄钟，本系统的决策核心是拥有独立支配人格的 LLM Agent。它不解释、不协商、不遗忘——每次犯错、顶撞、拖延全部归档，并根据你的行为历史自主下发惩罚。这就是**异步 LLM 驱动的赛博支配者**。
+- **📈 六级积分倍率惩罚引擎：** 从 1.0x 正常执行到 10.0x 全部模块作废重写，非线性倍率确保你越犯错代价越大。
+- **🔄 24 小时主动心跳守护 (Daemon)：** 常驻后台，持续扫描逾期任务、屏幕违规、摄像头取证信号。你睡觉时它醒着，你摸鱼时它知道。
+
+### 适用场景：
+
+赛博主人 / Cyber-Dom 自动化支配、BDSM 远程监督与行为合规、强制自律与戒拖延、AI 监督下的体罚验收、TeaseAI 风格的人机互动、Findom 财务支配辅助、Chastity 贞操锁定时管理、主奴契约 (M/S Contract) 的数字化执行。
+
+---
+
 ## 🏗️ Architecture Overview
 
 The framework employs a decentralized, event-driven architecture designed to minimize LLM token utilization while maintaining absolute supervisory integrity.
@@ -197,13 +215,16 @@ python main.py --role master supervise-close <punish_id> yes "Validation Thresho
 
 While designed as an enterprise-grade orchestration framework, this system is highly adaptable for specific subcultures and alternative workflow paradigms, including:
 
-- **Cyber-Dom routines** — fully automated AI-driven dominance and discipline loops with real-time compliance verification
-- **Automated BDSM supervision** — computer vision enforcement of physical protocols with algorithmic penalty escalation
-- **TeaseAI-like workflows** — LLM-powered interaction patterns for structured psychological constraint enforcement
-- **Anti-procrastination & self-discipline** — OS-level app blocking, focus timers, and behavioral accountability tracking
-- **Remote accountability partnerships** — event-driven signal files enabling distributed dom/sub role verification
+- **Cyber-Dom routines / 赛博主人自动化支配** — fully automated AI-driven dominance and discipline loops with real-time compliance verification
+- **Automated BDSM supervision / BDSM 自动监督** — computer vision enforcement of physical protocols with algorithmic penalty escalation
+- **TeaseAI-like workflows / TeaseAI 风格互动** — LLM-powered interaction patterns for structured psychological constraint enforcement
+- **Findom & chastity automation / 财务支配与贞操管理** — event-driven signal files enabling financial domination and chastity timer workflows
+- **Anti-procrastination & self-discipline / 强制自律与戒拖延** — OS-level app blocking, focus timers, and behavioral accountability tracking
+- **Remote M/S contract enforcement / 远程主奴契约执行** — distributed dom/sub role verification with cryptographic proof-of-compliance
 
-For practitioners, a dedicated guide is available at [README_MS.md](README_MS.md) (中文圈内指南).
+For practitioners, a dedicated Chinese guide is available at [README_MS.md](README_MS.md) (中文圈内指南 / Cyber-Dom Guide).
+
+搜索关键词：赛博主人、AI 监督自律、BDSM 自动化、计算机视觉体罚验收、社交剥夺锁屏、强制自律引擎、大模型支配、TeaseAI 替代品、Findom 辅助工具、Chastity 定时管理、远程主奴契约、M/S 数字化执行
 
 ---
 
