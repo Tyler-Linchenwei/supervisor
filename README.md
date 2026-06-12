@@ -141,7 +141,7 @@ The OS containment layer handles modular blacklists dynamically depending on the
 ### Installation
 1. Clone the repository into your local production environment:
    ```bash
-   git clone https://github.com/Tyler-Linchenwei/supervisor.git
+   git clone https://github.com/TylerAndClaude/supervisor.git
    cd supervisor
    ```
 
