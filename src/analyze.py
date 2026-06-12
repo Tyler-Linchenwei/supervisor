@@ -19,9 +19,11 @@ import glob as _glob
 import cv2
 import numpy as np
 
+from _paths import PROJECT_ROOT
+
 # ── 模型路径 ──────────────────────────────────────────────
 
-_MODEL_PATH = os.path.join(os.path.dirname(__file__), "pose_landmarker.task")
+_MODEL_PATH = os.path.join(PROJECT_ROOT, "pose_landmarker.task")
 
 # ── 单例 ──────────────────────────────────────────────────
 
@@ -361,8 +363,8 @@ def analyze_photo(filepath: str, punish_type: str | None = None) -> dict:
 
 def _get_punishment_type(punish_id: str) -> str | None:
     """从 config.json 读取惩罚类型（同时检索活跃和归档记录）。"""
-    config_path = os.path.join(os.path.dirname(__file__), "config.json")
-    archive_path = os.path.join(os.path.dirname(__file__), "archive.json")
+    config_path = os.path.join(PROJECT_ROOT, "config.json")
+    archive_path = os.path.join(PROJECT_ROOT, "archive.json")
     for path in (config_path, archive_path):
         try:
             with open(path, "r", encoding="utf-8") as f:
@@ -379,8 +381,8 @@ def _get_punishment_type(punish_id: str) -> str | None:
 
 def _get_punishment_amount(punish_id: str) -> int | None:
     """从配置中读取惩罚要求数量（正确处理翻倍逻辑）。"""
-    config_path = os.path.join(os.path.dirname(__file__), "config.json")
-    archive_path = os.path.join(os.path.dirname(__file__), "archive.json")
+    config_path = os.path.join(PROJECT_ROOT, "config.json")
+    archive_path = os.path.join(PROJECT_ROOT, "archive.json")
     for path in (config_path, archive_path):
         try:
             with open(path, "r", encoding="utf-8") as f:
@@ -413,7 +415,7 @@ def _get_punishment_amount(punish_id: str) -> int | None:
 
 def _get_strike_data(punish_id: str) -> dict | None:
     """读取惩罚关停时保存的击打计数数据。"""
-    review_path = os.path.join(os.path.dirname(__file__), "data", f"review_ready_{punish_id}.json")
+    review_path = os.path.join(PROJECT_ROOT, "data", f"review_ready_{punish_id}.json")
     try:
         if os.path.exists(review_path):
             with open(review_path, "r", encoding="utf-8") as f:
@@ -447,7 +449,7 @@ def analyze_punishment(punish_id: str) -> dict:
 
     # 屏幕监控类型（社交剥夺/娱乐剥夺）：读 JSON 报告，跳过 CV 分析
     if punish_type in ("社交剥夺", "娱乐剥夺"):
-        review_path = os.path.join(os.path.dirname(__file__), "data", f"review_ready_screen_{punish_id}.json")
+        review_path = os.path.join(PROJECT_ROOT, "data", f"review_ready_screen_{punish_id}.json")
         try:
             with open(review_path, "r", encoding="utf-8") as f:
                 screen_data = json.load(f)
@@ -469,7 +471,7 @@ def analyze_punishment(punish_id: str) -> dict:
         except Exception:
             return {"error": "未找到屏幕监控结算报告，监督可能仍在进行中。"}
 
-    capture_dir = os.path.join(os.path.dirname(__file__), "data", "proofs")
+    capture_dir = os.path.join(PROJECT_ROOT, "data", "proofs")
     pattern = os.path.join(capture_dir, f"{punish_id}_*.jpg")
     files = sorted(_glob.glob(pattern))
 
@@ -631,7 +633,7 @@ def analyze_punishment(punish_id: str) -> dict:
 
 def analyze_latest(punish_id: str) -> dict:
     """分析指定惩罚令最新的一张取证照片。"""
-    capture_dir = os.path.join(os.path.dirname(__file__), "data", "proofs")
+    capture_dir = os.path.join(PROJECT_ROOT, "data", "proofs")
     pattern = os.path.join(capture_dir, f"{punish_id}_*.jpg")
     files = sorted(_glob.glob(pattern))
 

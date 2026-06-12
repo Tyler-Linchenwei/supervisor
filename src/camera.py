@@ -36,12 +36,13 @@ except ImportError:
     _HAS_AUDIO = False
 
 import sys as _sys
+from _paths import PROJECT_ROOT
 
 # ---------- 配置 ----------
 
-CAPTURE_DIR = os.path.join(os.path.dirname(__file__), "data", "proofs")
-CONFIG_PATH = os.path.join(os.path.dirname(__file__), "camera_config.json")
-STREAMS_FILE = os.path.join(os.path.dirname(__file__), "data", "streams.json")
+CAPTURE_DIR = os.path.join(PROJECT_ROOT, "data", "proofs")
+CONFIG_PATH = os.path.join(PROJECT_ROOT, "camera_config.json")
+STREAMS_FILE = os.path.join(PROJECT_ROOT, "data", "streams.json")
 
 DEFAULT_CONFIG = {
     "camera_index": 0,

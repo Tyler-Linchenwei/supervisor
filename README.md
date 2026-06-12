@@ -80,15 +80,21 @@ The framework employs a decentralized, event-driven architecture designed to min
 
 ```text
 supervisor/
-├── main.py              # Central CLI Entrypoint & Argument Parser (Supports 36 Commands)
-├── daemon.py            # Edge Heartbeat Daemon (Asynchronous Event Evaluation & Escalation)
-├── screen_monitor.py    # Win32 Containment Loop, Hook Interception, Topmost UI Float
-├── camera.py            # Multimedia Streaming Layer, MJPEG Server, Device Hooks
-├── analyze.py           # Cross-Modal CV Analyzer (MediaPipe Kinematics & Color Vectors)
-├── tasks.py             # Lifecycle Task Aggregator & Validation Pipeline
-├── punish.py            # Multi-Tier Disciplinary Execution Engine
-├── points.py            # Non-Linear Penalty Escalation Engine (Dynamic Multiplier Scales)
-├── role.py              # Context-Aware Permission Token Management
+├── main.py              # Root Entry Wrapper → delegates to src/main.py
+├── src/                 # Core Python Source Package
+│   ├── main.py          # Central CLI Entrypoint & Argument Parser (Supports 36 Commands)
+│   ├── daemon.py        # Edge Heartbeat Daemon (Asynchronous Event Evaluation & Escalation)
+│   ├── screen_monitor.py # Win32 Containment Loop, Hook Interception, Topmost UI Float
+│   ├── camera.py        # Multimedia Streaming Layer, MJPEG Server, Device Hooks
+│   ├── analyze.py       # Cross-Modal CV Analyzer (MediaPipe Kinematics & Color Vectors)
+│   ├── tasks.py         # Lifecycle Task Aggregator & Validation Pipeline
+│   ├── punish.py        # Multi-Tier Disciplinary Execution Engine
+│   ├── points.py        # Non-Linear Penalty Escalation Engine (Dynamic Multiplier Scales)
+│   ├── role.py          # Context-Aware Permission Token Management
+│   └── trigger_claude.py # Asynchronous Alert Dispatcher & Inbox Manager
+├── docs/                # Project Documentation
+│   ├── CLAUDE.md        # System Core Configuration Matrix
+│   └── AGENTS.md        # Agent Operational Guide
 ├── config.json          # Volatile State Matrix & Active Process Manifests
 ├── archive.json         # Append-Only Immutable Auditing Ledger
 ├── data/
@@ -96,7 +102,6 @@ supervisor/
 │   ├── streams.json     # Inter-Process Multicast Stream Registries
 │   └── screen_monitor.json # Live Isolation State Space Manifest
 └── memory/              # Multi-Context Semantic Core (Injectable into Agent System Prompt)
-    ├── CLAUDE.md        # System Core Configuration Matrix
     ├── catalog.md       # Disciplinary Protocol Topology Catalog
     ├── rules.md         # Behavioral Constraint Set
     ├── teaching.md      # Adaptive Orchestration Syntaxes

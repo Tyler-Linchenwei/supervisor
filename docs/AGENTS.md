@@ -6,13 +6,19 @@
 
 ```
 supervisor/
-├── main.py          CLI统一入口（35条命令）
-├── punish.py        惩罚令模块（核心，465行）
-├── camera.py        摄像头监督模块（1377行，MJPEG推流+前端页面+监督强化）
-├── tasks.py         任务管理模块
-├── points.py        积分引擎（6档阈值 1.0×~10.0×）
-├── role.py          角色权限（master/slave分权）
-├── analyze.py       取证照片AI分析
+├── main.py          CLI入口（薄包装 → src/main.py）
+├── src/             Python核心源码
+│   ├── main.py      CLI统一入口（35条命令）
+│   ├── punish.py    惩罚令模块（核心，465行）
+│   ├── camera.py    摄像头监督模块（1377行，MJPEG推流+前端页面+监督强化）
+│   ├── tasks.py     任务管理模块
+│   ├── points.py    积分引擎（6档阈值 1.0×~10.0×）
+│   ├── role.py      角色权限（master/slave分权）
+│   ├── analyze.py   取证照片AI分析
+│   ├── daemon.py    主动心跳守护
+│   ├── screen_monitor.py 社交剥夺监督
+│   └── trigger_claude.py inbox/唤醒脚本
+├── docs/           项目文档
 ├── config.json      运行时状态（积分、活跃惩罚、活跃任务）
 ├── archive.json     历史归档（已完成惩罚+任务）
 ├── camera_config.json  摄像头配置

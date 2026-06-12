@@ -21,8 +21,10 @@ import sys
 import subprocess
 from datetime import datetime
 
-INBOX_DIR = os.path.join(os.path.dirname(__file__), "data", "inbox")
-ALERT_FILE = os.path.join(os.path.dirname(__file__), "data", "ALERT.txt")
+from _paths import PROJECT_ROOT
+
+INBOX_DIR = os.path.join(PROJECT_ROOT, "data", "inbox")
+ALERT_FILE = os.path.join(PROJECT_ROOT, "data", "ALERT.txt")
 
 
 def _ensure_inbox():
@@ -114,7 +116,7 @@ def _try_wake_claude(event_type: str, data: dict):
             [claude_bin, "--print", prompt],
             timeout=30,
             capture_output=True,
-            cwd=os.path.dirname(__file__),
+            cwd=PROJECT_ROOT,
         )
     except Exception:
         pass

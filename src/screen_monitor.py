@@ -6,9 +6,11 @@ import ctypes, ctypes.wintypes as _w, json, os, subprocess, sys, tempfile, threa
 from datetime import datetime
 import cv2, numpy as np
 
-_BASE = os.path.dirname(os.path.abspath(__file__))
-PROOFS_DIR = os.path.join(_BASE, "data", "proofs")
-STATUS_FILE = os.path.join(_BASE, "data", "screen_monitor.json")
+from _paths import PROJECT_ROOT
+
+_BASE = PROJECT_ROOT
+PROOFS_DIR = os.path.join(PROJECT_ROOT, "data", "proofs")
+STATUS_FILE = os.path.join(PROJECT_ROOT, "data", "screen_monitor.json")
 
 FORBIDDEN_PROCESSES = [
     "steam.exe","epicgameslauncher.exe","battle.net.exe","ubisoftconnect.exe","eaapp.exe","goggalaxy.exe",

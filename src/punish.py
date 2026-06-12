@@ -15,8 +15,10 @@ import tempfile
 import uuid
 from datetime import datetime, timedelta
 
-CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config.json")
-ARCHIVE_PATH = os.path.join(os.path.dirname(__file__), "archive.json")
+from _paths import PROJECT_ROOT
+
+CONFIG_PATH = os.path.join(PROJECT_ROOT, "config.json")
+ARCHIVE_PATH = os.path.join(PROJECT_ROOT, "archive.json")
 from points import get_current_multiplier
 
 

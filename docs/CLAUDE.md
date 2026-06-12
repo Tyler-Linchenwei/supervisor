@@ -12,15 +12,21 @@
 
 ```
 supervisor/
-├── main.py              CLI统一入口（36条命令）
-├── punish.py            惩罚令模块（核心）
-├── camera.py            摄像头监督（MJPEG推流+前端+监督强化）
-├── screen_monitor.py    社交剥夺监督（进程强杀+Win32悬浮窗）
-├── daemon.py            主动心跳守护（信号扫描+逾期检测）
-├── tasks.py             任务管理
-├── points.py            积分引擎（6档 1.0x~10.0x）
-├── role.py              角色权限（master/slave）
-├── analyze.py           取证照片AI分析
+├── main.py              CLI入口（薄包装 → src/main.py）
+├── src/                 Python核心源码
+│   ├── main.py           CLI统一入口（36条命令）
+│   ├── punish.py         惩罚令模块（核心）
+│   ├── camera.py         摄像头监督（MJPEG推流+前端+监督强化）
+│   ├── screen_monitor.py 社交剥夺监督（进程强杀+Win32悬浮窗）
+│   ├── daemon.py         主动心跳守护（信号扫描+逾期检测）
+│   ├── tasks.py          任务管理
+│   ├── points.py         积分引擎（6档 1.0x~10.0x）
+│   ├── role.py           角色权限（master/slave）
+│   ├── analyze.py        取证照片AI分析
+│   └── trigger_claude.py inbox/唤醒脚本
+├── docs/                项目文档
+│   ├── CLAUDE.md        本文件
+│   └── AGENTS.md        Agent指南
 ├── config.json          运行时状态
 ├── archive.json         历史归档
 ├── data/

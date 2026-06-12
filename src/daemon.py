@@ -14,7 +14,9 @@ import glob as _glob
 SCAN_INTERVAL = 5       # 信号文件扫描间隔（秒）
 OVERDUE_INTERVAL = 60   # 逾期检查间隔（秒）
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+from _paths import PROJECT_ROOT
+
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
 # 延迟导入，避免 trigger_claude 在 daemon 启动时就执行 import side effects
 _trigger = None
@@ -40,7 +42,7 @@ def _check_overdue():
         # 读 screen_monitor 状态
         sm_active = set()
         try:
-            sf = os.path.join(os.path.dirname(__file__), "data", "screen_monitor.json")
+            sf = os.path.join(PROJECT_ROOT, "data", "screen_monitor.json")
             if os.path.exists(sf):
                 with open(sf, "r", encoding="utf-8") as f:
                     for k, v in json.load(f).items():
@@ -53,7 +55,7 @@ def _check_overdue():
 
         # 只对没有活跃 screen_monitor 的惩罚做逾期升级
         now = datetime.now()
-        cfg_path = os.path.join(os.path.dirname(__file__), "config.json")
+        cfg_path = os.path.join(PROJECT_ROOT, "config.json")
         with open(cfg_path, "r", encoding="utf-8") as f:
             cfg = json.load(f)
         overdue_punishments = []
